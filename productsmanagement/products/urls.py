@@ -16,4 +16,8 @@ urlpatterns = [
     # API views
     path('', include(router.urls)),
     path('api/health/', views.health_check, name='health_check'),
+
+    # Status endpoints for Eureka
+    path('status/', views.status_page, name='status_page'),
+    path('api/status/', views.status_check, name='status_check'),
 ]

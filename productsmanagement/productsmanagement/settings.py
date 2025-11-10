@@ -137,3 +137,12 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 }
+
+# Eureka Client Configuration
+EUREKA_CLIENT = {
+    'EUREKA_SERVER': 'http://localhost:8761/eureka',
+    'APP_NAME': 'PRODUCTSMANAGEMENT',
+    'INSTANCE_HOST': 'localhost',
+    'INSTANCE_PORT': 8000,
+    'INSTANCE_ID': 'PRODUCTSMANAGEMENT:8000',
+}

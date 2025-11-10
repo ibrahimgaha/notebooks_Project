@@ -52,3 +52,10 @@ class NotebookViewSet(viewsets.ModelViewSet):
 @api_view(['GET'])
 def health_check(request):
     return Response({"status": "healthy", "service": "notebook-management"}, status=status.HTTP_200_OK)
+
+@api_view(['GET'])
+def status_check(request):
+    return Response({"status": "UP", "service": "ProductsManagement"}, status=status.HTTP_200_OK)
+
+def status_page(request):
+    return JsonResponse({"status": "UP", "service": "ProductsManagement"})
